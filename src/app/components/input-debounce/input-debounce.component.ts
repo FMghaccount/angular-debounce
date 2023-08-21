@@ -13,6 +13,9 @@ export class InputDebounceComponent {
   public userQuestion: string;
   userQuestionUpdate = new Subject<string>();
 
+  modelChange = (event: Event) => {
+    this.userQuestionUpdate.next((<HTMLInputElement>event.target).value);
+  };
   constructor() {
     // Debounce search.
     this.userQuestionUpdate
