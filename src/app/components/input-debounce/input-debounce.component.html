@@ -1,0 +1,8 @@
+<h1>Hello Angular</h1>
+
+<input class="form-control" [(ngModel)]="userQuestion" type="text" name="userQuestion" id="userQuestions"
+(ngModelChange)="this.userQuestionUpdate.next($event)">
+
+<ul>
+  <li *ngFor="let message of consoleMessages">{{message}}</li>
+</ul>
